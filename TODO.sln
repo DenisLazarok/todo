@@ -8,13 +8,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{83C6CC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{10FAFC18-F07A-413B-93A7-4CFC763C34DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Domian", "src\TODO.Domian\TODO.Domian.csproj", "{63052044-5FD3-4414-8CB9-C06A91A9C1A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Domain", "src\TODO.Domain\TODO.Domain.csproj", "{63052044-5FD3-4414-8CB9-C06A91A9C1A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Infrastucture", "src\TODO.Infrastucture\TODO.Infrastucture.csproj", "{44037068-DFDA-4448-BB68-42E70CADFEB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Infrastructure", "src\TODO.Infrastructure\TODO.Infrastructure.csproj", "{44037068-DFDA-4448-BB68-42E70CADFEB0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Api", "src\TODO.Api\TODO.Api.csproj", "{073A2AC6-AAB7-417C-A9C2-24C14079F914}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Application", "src\TODO.Application\TODO.Application.csproj", "{52023D34-A13A-4409-84A1-C02E24A44C79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4F6E7F2B-90F3-4758-AC31-9B6851ED7F4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
