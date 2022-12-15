@@ -3,6 +3,9 @@ using TODO.Domain.Entities.TodoAggregate;
 
 namespace TODO.Domain.Specifications;
 
+/// <summary>
+/// specification for todo filter
+/// </summary>
 public class TodoListFilterSpecification: Specification<Todo>
 {
     public TodoListFilterSpecification(IEnumerable<Guid> ids, string? header)

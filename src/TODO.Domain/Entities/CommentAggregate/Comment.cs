@@ -3,6 +3,9 @@ using TODO.Domain.Interfaces;
 
 namespace TODO.Domain.Entities.CommentAggregate;
 
+/// <summary>
+/// Todo comment
+/// </summary>
 public class Comment : BaseEntity, IAggregateRoot
 {
     

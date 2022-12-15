@@ -1,4 +1,5 @@
 using TODO.Api.Configurations;
+using TODO.Api.Middleware;
 using TODO.Application;
 using TODO.Application.Common;
 using TODO.Domain.Interfaces;
@@ -52,6 +53,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCustomExceptionHandler();
 
 app.UseHttpsRedirection();
 

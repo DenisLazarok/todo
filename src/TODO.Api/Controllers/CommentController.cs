@@ -19,6 +19,11 @@ public class CommentController : BaseController
         _mapper = mapper;
     }
 
+    /// <summary>
+    /// get todo by id
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpGet]
     [Route("[action]")]
     public async Task<IEnumerable<CommentVm>> GetByTodoId(Guid id)
@@ -28,6 +33,11 @@ public class CommentController : BaseController
         return result;
     }
 
+    /// <summary>
+    /// add comment
+    /// </summary>
+    /// <param name="request">comment</param>
+    /// <returns>guid</returns>
     [HttpPost]
     [Route("[action]")]
     public async Task<Guid> Add(AddCommentDto request)

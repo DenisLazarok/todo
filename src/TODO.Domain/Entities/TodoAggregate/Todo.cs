@@ -4,6 +4,10 @@ using TODO.Domain.Interfaces;
 
 namespace TODO.Domain.Entities.TodoAggregate;
 
+
+/// <summary>
+/// Todo
+/// </summary>
 public class Todo : BaseEntity, IAggregateRoot
 {
     #pragma warning disable CS8618 // for automapper
