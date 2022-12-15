@@ -5,11 +5,13 @@ using TODO.Infrastructure.Data;
 
 namespace TODO.Infrastructure;
 
-public static class DI
+public static class Dependency
 {
-    public static void ConfigureServices(IConfiguration configuration, IServiceCollection services)
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<TodoContext>(c =>
             c.UseNpgsql(configuration.GetConnectionString("TodoConnection")));
+
+        return services;
     }
 }

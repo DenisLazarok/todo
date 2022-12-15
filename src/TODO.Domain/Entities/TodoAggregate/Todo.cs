@@ -6,7 +6,11 @@ namespace TODO.Domain.Entities.TodoAggregate;
 
 public class Todo : BaseEntity, IAggregateRoot
 {
-    public Todo(string header, CategoryType category, string color)
+    private Todo()
+    {
+        IsCompleted = false;
+    }
+    public Todo(string header, CategoryType category, string color) 
     {
         Header = header;
         Category = category;
@@ -18,7 +22,7 @@ public class Todo : BaseEntity, IAggregateRoot
         Header = header;
         Category = category;
         Color = color;
-        Comments = comments;
+        Comments = comments;   
     }
 
     public string Header { get; private set; }

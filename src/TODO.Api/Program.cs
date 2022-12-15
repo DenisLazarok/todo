@@ -1,10 +1,24 @@
+using TODO.Api.Configurations;
+using TODO.Application;
+using TODO.Application.Common;
+using TODO.Domain.Interfaces;
 using TODO.Infrastructure;
 using TODO.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-DI.ConfigureServices(builder.Configuration, builder.Services);
+builder.Services.AddInfrastructure(builder.Configuration)
+    .AddApplication()
+    .AddScoped(typeof(IRepository<>), typeof(EfRepository<>))
+    .AddScoped(typeof(IReadRepository<>), typeof(EfRepository<>));
+    
+
+builder.Services.AddAutoMapper(config =>
+{
+    config.AddProfile(new ApiMapperProfile());
+    config.AddProfile(new ApplicationMapperProfile());
+});
 
 // Add services to the container.
 

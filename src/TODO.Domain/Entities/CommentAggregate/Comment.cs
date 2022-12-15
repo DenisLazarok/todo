@@ -5,12 +5,16 @@ namespace TODO.Domain.Entities.CommentAggregate;
 
 public class Comment : BaseEntity, IAggregateRoot
 {
+    private Comment()
+    {
+        
+    }
     public Comment(string text)
     {
         Text = text;
     }
     
-    public int TodoId { get; set; }
-    public Todo? Todos { get; set; }
+    public Guid TodoId { get; set; }
+    public Todo Todos { get; set; }
     public string Text { get; private set; }
 }
