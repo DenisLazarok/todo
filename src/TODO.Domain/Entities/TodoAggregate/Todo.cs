@@ -6,10 +6,12 @@ namespace TODO.Domain.Entities.TodoAggregate;
 
 public class Todo : BaseEntity, IAggregateRoot
 {
+    #pragma warning disable CS8618 // for automapper
     private Todo()
     {
         IsCompleted = false;
     }
+    
     public Todo(string header, CategoryType category, string color) 
     {
         Header = header;
@@ -37,4 +39,9 @@ public class Todo : BaseEntity, IAggregateRoot
     
     public string Color { get; init; }
 
+
+    public void UpdateHeader(string newValue)
+    {
+        Header = newValue;
+    }
 }

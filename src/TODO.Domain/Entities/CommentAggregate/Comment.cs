@@ -5,7 +5,10 @@ namespace TODO.Domain.Entities.CommentAggregate;
 
 public class Comment : BaseEntity, IAggregateRoot
 {
+    
+#pragma warning disable CS8618 // for automapper
     private Comment()
+#pragma warning restore CS8618
     {
         
     }
@@ -14,7 +17,7 @@ public class Comment : BaseEntity, IAggregateRoot
         Text = text;
     }
     
-    public Guid TodoId { get; set; }
-    public Todo Todos { get; set; }
+    public Guid TodoId { get; private set; }
+    public Todo? Todos { get; private set; }
     public string Text { get; private set; }
 }

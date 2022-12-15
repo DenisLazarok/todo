@@ -1,4 +1,4 @@
-﻿namespace TODO.Application.Queries;
+﻿namespace TODO.Application.Models;
 
 public class BaseVm
 {

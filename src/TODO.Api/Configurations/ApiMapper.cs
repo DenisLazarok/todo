@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using TODO.Api.Contracts;
+using TODO.Application.Commands.AddComment;
 using TODO.Application.Commands.AddTodo;
 using TODO.Application.Queries.GetTodoList;
 
@@ -11,5 +12,6 @@ public class ApiMapperProfile : Profile
     {
         CreateMap<GetTodoFilterDto, GetTodoListQuery>();
         CreateMap<AddTodoDto, AddTodoCommand>();
+        CreateMap<AddCommentDto, AddCommentCommand>();
     }
 }
