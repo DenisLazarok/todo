@@ -1,31 +1,36 @@
-﻿using TODO.Domain.Extensions;
+﻿using TODO.Domain.Entities.CommentAggregate;
+using TODO.Domain.Extensions;
 using TODO.Domain.Interfaces;
 
 namespace TODO.Domain.Entities.TodoAggregate;
 
 public class Todo : BaseEntity, IAggregateRoot
 {
-    public Todo(string header, DateTime createDate, bool isCompleted, CategoryType category, string color)
+    public Todo(string header, CategoryType category, string color)
     {
         Header = header;
-        CreateDate = createDate;
-        IsCompleted = isCompleted;
         Category = category;
         Color = color;
     }
+    
+    public Todo(string header, CategoryType category, string color, List<Comment> comments)
+    {
+        Header = header;
+        Category = category;
+        Color = color;
+        Comments = comments;
+    }
 
-    public string Header { get; init; }
+    public string Header { get; private set; }
     
-    public DateTime CreateDate { get; init; } = DateTime.Now;
+    public DateTime CreateDate { get; private set; } = DateTime.Now;
     
-    public bool IsCompleted { get; init; }
+    public bool IsCompleted { get; private set; }
     
-    public CategoryType Category { get; init; }
+    public CategoryType Category { get; private set; }
+
+    public List<Comment> Comments { get; private set; } = new List<Comment>();
     
     public string Color { get; init; }
 
-    public override int GetHashCode()
-    {
-        return Header.ToMd5();
-    }
 }

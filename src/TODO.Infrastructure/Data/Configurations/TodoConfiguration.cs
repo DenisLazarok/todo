@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TODO.Domain.Entities.TodoAggregate;
 
-namespace TODO.Infrastructure.Configurations;
+namespace TODO.Infrastructure.Data.Configurations;
 
 public class TodoConfiguration : IEntityTypeConfiguration<Todo>
 {
